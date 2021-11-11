@@ -1,13 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import CC from './CC'
+import FC from './FC'
 
 function App() {
   return (
     <div className="App">
       
-      <h1>Lifecycling Method in React js</h1><hr/>
-      <CC />
+      <h1>Hooks in React js</h1><hr/>
+      <FC />
     
     </div>
   );
