@@ -1,31 +1,27 @@
 import React,{Component} from 'react'
+import './CC.css'
 class CC extends React.Component {
     
-    constructor(props) {
-        super(props)
-        this.state={
-            color: 'red',
-            bg: 'green',
+    constructor() {
+        super()
+        this.state = {
+            number: 0
         }
     }
-    changeColor = () => {
-        this.setState({
-            color: 'indigo'
-        })
-    }
-    changeBackground = () => {
-        this.setState({
-            bg: 'white'
-        })
-    }
-    
+    add = () => {
+        this.setState({number:this.state.number+1})
+      }
+    subract = () => {
+        this.setState({number:this.state.number-1})
+      }
     
     render() {
         return (
              <div>
-                 <h1 style={{color:this.state.color,backgroundColor:this.state.bg}}>This is Dynamic Text by Class Component</h1>
-                 <button onClick={this.changeColor}>Change Color</button>
-                 <button onClick={this.changeBackground}>Change Background</button>
+                 <h2>React Counter Programs!</h2><hr />
+                 <h1>{this.state.number}</h1>
+                 <button onClick={this.add}>Add +1</button>
+                 <button onClick={this.subract}>Substrac -1</button>
              </div>
         );
     }
