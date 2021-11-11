@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       
-      <h1>Event Handling in React js</h1>
+      <h1>Lifecycling Method in React js</h1><hr/>
       <CC />
     
     </div>
