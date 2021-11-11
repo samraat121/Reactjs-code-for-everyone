@@ -1,16 +1,31 @@
 import React,{Component} from 'react'
 class CC extends React.Component {
-    classComponent = () => {
-        alert("This is is Class COmponent Here");
+    
+    constructor(props) {
+        super(props)
+        this.state={
+            color: 'red',
+            bg: 'green',
+        }
     }
-    inPutChange = () => {
-        alert('Input file change');
+    changeColor = () => {
+        this.setState({
+            color: 'indigo'
+        })
     }
+    changeBackground = () => {
+        this.setState({
+            bg: 'white'
+        })
+    }
+    
+    
     render() {
         return (
              <div>
-                 <button style={{color:'red',padding:'8px',}} onClick={this.classComponent}>Click now Class component</button>
-                 <input type="text" onChange={this.inPutChange} className="form-control mb-2 mr-sm-2" placeholder="Jane Doe" />
+                 <h1 style={{color:this.state.color,backgroundColor:this.state.bg}}>This is Dynamic Text by Class Component</h1>
+                 <button onClick={this.changeColor}>Change Color</button>
+                 <button onClick={this.changeBackground}>Change Background</button>
              </div>
         );
     }
