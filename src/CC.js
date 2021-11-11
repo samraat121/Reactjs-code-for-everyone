@@ -9,7 +9,7 @@ class CC extends React.Component {
     render() {
         return (
              <div>
-                 <button onClick={this.classComponent}>Click now Class component</button>
+                 <button style={{color:'red',padding:'8px',}} onClick={this.classComponent}>Click now Class component</button>
                  <input type="text" onChange={this.inPutChange} className="form-control mb-2 mr-sm-2" placeholder="Jane Doe" />
              </div>
         );
