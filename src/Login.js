@@ -1,4 +1,8 @@
 import React, {useState} from 'react'
+import swal from 'sweetalert'
+// import bootstrap from '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+
+import swl from 'sweetalert'
 
 function Login() {
 
@@ -9,9 +13,9 @@ function Login() {
         event.preventDefault();
         
         if (email == 'admin@mail.com' && password == 'password') {
-            alert('Authentication is Successfull')
+            swal('Login Successfull', 'Authentication is Successfull', 'success');
         } else {
-            console.log("SORRY YOUR ARE NOT AUTHENTICATED PERSON IN THIS APP")
+            swal('Invalid Login Details','SORRY YOUR ARE NOT AUTHENTICATED PERSON IN THIS APP', 'error')
         }
     }
 
