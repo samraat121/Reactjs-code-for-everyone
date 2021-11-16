@@ -8,6 +8,7 @@ import Home from './pages/Home'
 import Contact from './pages/Contact'
 import Services from './pages/Services'
 import About from './pages/About'
+import Localstorage from './Localstorage'
 
 import {
   BrowserRouter as Router,
@@ -38,6 +39,8 @@ function App() {
           <Route exact path="/services">
             <Services />
           </Route>
+          <Route path='/localstorage' component={Localstorage} exact/>
+          
 
         </Switch>
       </div>
